@@ -18,5 +18,5 @@ class Payment(models.Model):
     products= models.CharField(max_length=64)
     
     def __str__(self):
-        return self.payment_method
+        return self.payment_choices
     
