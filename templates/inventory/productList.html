@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+<body>
+    <table>
+    <th class="heading">
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td>Product Details</td>
+    </th>
+    {%for product in product%}
+    <tr>
+        <td>{{product.vendor}}</td>
+        <td>{{product.name}}</td>
+        <td>{{ product.price}}</td>
+        <td><a href="{% url 'product_details_view' id=product.id%}">View Product</a></td>
+    </tr>
+    {%endfor%}
+</table>
+</body>
+</html>
